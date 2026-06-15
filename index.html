@@ -389,6 +389,7 @@ footer.fineprint{text-align:center; font-size:11px; color:var(--mute); padding:6
               <option value="HUF">HUF Ft</option>
               <option value="EUR">EUR €</option>
               <option value="USD">USD $</option>
+              <option value="JPY">JPY ¥</option>
             </select>
           </div>
         </div>
@@ -397,6 +398,7 @@ footer.fineprint{text-align:center; font-size:11px; color:var(--mute); padding:6
           <summary>Edit exchange rates</summary>
           <div class="rrow">1 EUR = <input id="rateEUR" type="number" inputmode="decimal" value="395"> HUF</div>
           <div class="rrow">1 USD = <input id="rateUSD" type="number" inputmode="decimal" value="360"> HUF</div>
+          <div class="rrow">1 JPY = <input id="rateJPY" type="number" inputmode="decimal" value="2.45"> HUF</div>
           <p style="margin-top:10px;">Mid-2026 estimates — set the real rate from your banking app on arrival.</p>
         </details>
       </div>
@@ -442,6 +444,26 @@ footer.fineprint{text-align:center; font-size:11px; color:var(--mute); padding:6
           <button class="say" data-say="Egészségére" aria-label="Hear: Egészségére"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H3v6h3l5 4z"/><path d="M16 9a4 4 0 0 1 0 6M19 6.5a8 8 0 0 1 0 11"/></svg></button>
           <div class="ph-text"><span class="hu">Egészségére</span><span class="phon">EG-ace-shay-GAY-reh</span></div>
           <span class="en">Cheers / to your health</span>
+        </div>
+        <div class="phrase">
+          <button class="say" data-say="Ez nem diéta. Ez kutatás." aria-label="Hear: Ez nem diéta. Ez kutatás."><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H3v6h3l5 4z"/><path d="M16 9a4 4 0 0 1 0 6M19 6.5a8 8 0 0 1 0 11"/></svg></button>
+          <div class="ph-text"><span class="hu">Ez nem diéta. Ez kutatás.</span><span class="phon">ez nem dee-AY-tah · ez KOO-tah-tahsh</span></div>
+          <span class="en">This is not a diet. This is research.</span>
+        </div>
+        <div class="phrase">
+          <button class="say" data-say="De még van hely desszertnek." aria-label="Hear: De még van hely desszertnek."><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H3v6h3l5 4z"/><path d="M16 9a4 4 0 0 1 0 6M19 6.5a8 8 0 0 1 0 11"/></svg></button>
+          <div class="ph-text"><span class="hu">De még van hely desszertnek.</span><span class="phon">deh meg vahn hey DESS-ert-nek</span></div>
+          <span class="en">But there is still room for dessert.</span>
+        </div>
+        <div class="phrase">
+          <button class="say" data-say="Nem értem, de kérem." aria-label="Hear: Nem értem, de kérem."><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H3v6h3l5 4z"/><path d="M16 9a4 4 0 0 1 0 6M19 6.5a8 8 0 0 1 0 11"/></svg></button>
+          <div class="ph-text"><span class="hu">Nem értem, de kérem.</span><span class="phon">nem AIR-tem, deh KAY-rem</span></div>
+          <span class="en">I don't understand, but yes please.</span>
+        </div>
+        <div class="phrase">
+          <button class="say" data-say="A pálinka döntött helyettem." aria-label="Hear: A pálinka döntött helyettem."><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H3v6h3l5 4z"/><path d="M16 9a4 4 0 0 1 0 6M19 6.5a8 8 0 0 1 0 11"/></svg></button>
+          <div class="ph-text"><span class="hu">A pálinka döntött helyettem.</span><span class="phon">ah PAH-leen-kah DUN-tutt HEY-et-tem</span></div>
+          <span class="en">The pálinka decided for me.</span>
         </div>
         <p class="saynote" id="saynote">Your device has no built-in voice for audio playback — the phonetic guide under each phrase will help.</p>
       </div>
@@ -567,7 +589,7 @@ const TRIP = {
       stops: [
         { time:"15:00", period:"afternoon", type:"sight", title:"Arrive in Pécs", locationName:"Széchenyi tér, Pécs",
           mapsQuery:"Széchenyi tér Pécs", guess:true,
-          notes:"We gather around 3 pm and settle in. On the main square stands the former Gazi Kasim Pasha mosque — now a Catholic church, the most striking Ottoman building in the country. A full walking tour follows tomorrow." },
+          notes:"We gather around 15:00 and settle in. On the main square stands the former Gazi Kasim Pasha mosque — now a Catholic church, the most striking Ottoman building in the country. A full walking tour follows tomorrow." },
         { time:"17:00", period:"afternoon", type:"travel", title:"Transfer to Villány", locationName:"Villány — red-wine heartland",
           mapsQuery:"Villány Hungary", guess:true, travelNext:"≈ 30 min by car",
           notes:"Hungary's red-wine country, home to the native reds Kadarka and Kékfrankos alongside Cabernet and Syrah." },
@@ -580,7 +602,7 @@ const TRIP = {
           noDrink:"The terrace, the open kitchen and Bicsár's cooking are the whole point. Ask for grape must (the estate's alcohol-free sparkling) or local sparkling water — you'll miss nothing." },
         { time:"22:30", period:"evening", type:"experience", title:"Zsolnay Light Festival", locationName:"Pécs Cathedral",
           mapsQuery:"Pécs Cathedral Dóm tér", guess:true,
-          notes:"Back in Pécs by about 10.30 pm for the finale — projection mapping across the cathedral façade (running 2–6 July). Genuinely spectacular. Good bars are a short stroll from the hotel for night owls." }
+          notes:"Back in Pécs by about 22:30 for the finale — projection mapping across the cathedral façade (running 2–6 July). Genuinely spectacular. Good bars are a short stroll from the hotel for night owls." }
       ]
     },
     {
@@ -596,7 +618,7 @@ const TRIP = {
           notes:"Anyone keen joins the host first — stalls of stone fruit and peppers, sheep's cheeses, smoked sausage, and forest honey from the Mecsek." },
         { time:"10:00", period:"morning", type:"sight", title:"Old-town walk & UNESCO necropolis", locationName:"Early Christian Necropolis, Pécs",
           mapsQuery:"Early Christian Necropolis Pécs", 
-          notes:"From around 10 am we walk the city: the Early Christian Necropolis — a UNESCO site where 4th-century Roman Sopianae left burial chambers painted with remarkable murals — plus the old town and the mosque-turned-church." },
+          notes:"From around 10:00 we walk the city: the Early Christian Necropolis — a UNESCO site where 4th-century Roman Sopianae left burial chambers painted with remarkable murals — plus the old town and the mosque-turned-church." },
         { time:"13:00", approx:true, period:"afternoon", type:"dining", title:"Kossuth Kisvendéglő", locationName:"Király utca 35, Pécs",
           address:"Király utca 35, Pécs", mapsQuery:"Kossuth Kisvendéglő Király utca 35 Pécs",
           badges:["Hungarian home cooking","Shared & family-style"],
@@ -624,7 +646,7 @@ const TRIP = {
       stops: [
         { time:"09:00", period:"morning", type:"travel", title:"Train to Budapest", locationName:"Pécs railway station",
           mapsQuery:"Pécs railway station", guess:true, travelNext:"≈ 3 h by train",
-          notes:"An early breakfast and the 9 am train north." },
+          notes:"An early breakfast and the 09:00 train north." },
         { time:"12:30", approx:true, period:"afternoon", type:"sight", title:"Drop bags · walk to Parliament", locationName:"Hungarian Parliament Building",
           address:"Kossuth Lajos tér 1-3, Budapest", mapsQuery:"Hungarian Parliament Building Budapest",
           notes:"We drop bags at Hotel Gin Budapest and walk to Parliament before boarding a boat on the Danube." },
@@ -653,7 +675,7 @@ const TRIP = {
       stops: [
         { time:"10:00", period:"morning", type:"travel", title:"Drive west to Lake Balaton", locationName:"Lake Balaton",
           mapsQuery:"Lake Balaton Hungary", guess:true, travelNext:"≈ 2 h by car",
-          notes:"After a late breakfast we set off around 10 am toward the lake's north shore." },
+          notes:"After a late breakfast we set off around 10:00 toward the lake's north shore." },
         { time:"12:30", approx:true, period:"afternoon", type:"sight", title:"Lakeside market", locationName:"Balaton north shore market",
           mapsQuery:"Balaton piac market north shore", guess:true,
           notes:"A lively market — local specialities to taste, souvenirs to carry home. Balaton's larder is its own cuisine: fogas (pike-perch), catfish, sweet lake reeds, and the vegetables of volcanic soils." },
@@ -988,27 +1010,26 @@ async function fetchWeather(day){
 
 /* ---------------------------- CURRENCY ---------------------------- */
 function fmt(n, cur){
-  const opts = cur==="HUF" ? {maximumFractionDigits:0} : {minimumFractionDigits:2, maximumFractionDigits:2};
-  const sym = {HUF:"Ft ", EUR:"€", USD:"$"}[cur] || "";
+  const zeroDec = (cur==="HUF" || cur==="JPY");
+  const opts = zeroDec ? {maximumFractionDigits:0} : {minimumFractionDigits:2, maximumFractionDigits:2};
+  const sym = {HUF:"Ft ", EUR:"€", USD:"$", JPY:"¥"}[cur] || "";
   return sym + n.toLocaleString(undefined, opts);
 }
 function convert(){
   const amt = parseFloat($("#ccAmount").value)||0;
   const from = $("#ccFrom").value;
-  const rEUR = parseFloat($("#rateEUR").value)||1;
-  const rUSD = parseFloat($("#rateUSD").value)||1;
-  // everything via HUF
-  let huf;
-  if (from==="HUF") huf = amt;
-  else if (from==="EUR") huf = amt*rEUR;
-  else huf = amt*rUSD;
-  const out = {
-    HUF: huf,
-    EUR: huf/rEUR,
-    USD: huf/rUSD
+  // HUF-per-unit rates (HUF is the base)
+  const r = {
+    HUF: 1,
+    EUR: parseFloat($("#rateEUR").value)||1,
+    USD: parseFloat($("#rateUSD").value)||1,
+    JPY: parseFloat($("#rateJPY").value)||1
   };
-  const others = ["HUF","EUR","USD"].filter(c=>c!==from);
-  $("#ccOut").innerHTML = others.map(c=>`
+  const huf = amt * r[from];                 // selected currency -> HUF
+  const cur = ["HUF","EUR","USD","JPY"];
+  const out = {};
+  cur.forEach(c => out[c] = huf / r[c]);     // HUF -> each currency
+  $("#ccOut").innerHTML = cur.filter(c=>c!==from).map(c=>`
     <div class="cc-out"><span class="lab">${c}</span><span class="val">${fmt(out[c], c)}</span></div>`).join("");
 }
 
@@ -1110,7 +1131,7 @@ function init(){
     $$(".say").forEach(b=>b.style.display="none");
   }
   // currency
-  ["ccAmount","ccFrom","rateEUR","rateUSD"].forEach(id=>{
+  ["ccAmount","ccFrom","rateEUR","rateUSD","rateJPY"].forEach(id=>{
     const el = $("#"+id); if (el) el.addEventListener("input", convert);
   });
 
