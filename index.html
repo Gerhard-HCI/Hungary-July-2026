@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-<meta name="theme-color" content="#6E1E3C" />
+<meta name="theme-color" content="#CD2A3E" />
 <title>A Food Lover's Hungary · 2–6 July 2026</title>
 
 <!-- Webfonts (optional). The app degrades gracefully to Georgia / system-ui if these don't load. -->
@@ -21,17 +21,17 @@
    some embedded contexts.
    ============================================================ */
 :root{
-  --wine:#6E1E3C;
-  --wine-deep:#4A1228;
+  --wine:#CD2A3E;
+  --wine-deep:#8E1B2E;
   --parchment:#F5EFE6;
   --surface:#FBF7F0;
   --ink:#2B1D22;
-  --ochre:#C28A2C;
-  --eosin:#1F6E5A;       /* signature accent — Zsolnay eosin glaze */
+  --ochre:#3F7A4F;
+  --eosin:#3F7A4F;       /* signature accent — Zsolnay eosin glaze */
   --mute:#8A7A72;
   --line:#E4D8C8;
   --rust:#B5532E;
-  --shadow:0 1px 2px rgba(74,18,40,.05), 0 8px 24px rgba(74,18,40,.07);
+  --shadow:0 1px 2px rgba(142,27,46,.05), 0 8px 24px rgba(142,27,46,.07);
   --radius:18px;
   --tap:46px;
 }
@@ -60,12 +60,13 @@ h1,h2,h3{margin:0; font-family:"Cormorant Garamond", Georgia, serif; font-weight
    ============================================================ */
 header.topbar{
   position:sticky; top:0; z-index:40;
-  background-color:#6E1E3C;
-  background-image:linear-gradient(160deg,#7A2342 0%, #6E1E3C 45%, #4A1228 100%);
+  background-color:#CD2A3E;
+  background-image:linear-gradient(160deg,#D63A4C 0%, #CD2A3E 45%, #8E1B2E 100%);
   color:#F6E9DD;
   padding:calc(env(safe-area-inset-top) + 12px) 18px 12px;
   border-bottom:1px solid rgba(0,0,0,.15);
 }
+header.topbar::after{content:"";position:absolute;left:0;right:0;bottom:0;height:5px;background:linear-gradient(to bottom,#CD2A3E 0 33.34%,#ffffff 33.34% 66.67%,#3F7A4F 66.67% 100%);}
 .topbar .row{display:flex; align-items:center; justify-content:space-between; gap:12px;}
 .topbar .mark{font-family:"Cormorant Garamond",Georgia,serif; font-size:19px; font-weight:600; letter-spacing:.01em; line-height:1.05;}
 .topbar .mark small{display:block; font-family:"DM Sans",sans-serif; font-size:10px; letter-spacing:.16em; text-transform:uppercase; color:#E3B7C4; font-weight:700; margin-top:3px;}
@@ -74,12 +75,12 @@ header.topbar{
 .clock-label{font-size:9.5px; letter-spacing:.14em; text-transform:uppercase; color:#E3B7C4; font-weight:700; margin-top:4px;}
 .daypill{
   display:inline-flex; align-items:center; gap:7px; margin-top:11px;
-  background-color:rgba(31,110,90,.22);
-  border:1px solid rgba(232,209,168,.35);
+  background-color:rgba(63,122,79,.22);
+  border:1px solid rgba(255,255,255,.35);
   color:#F4EAD8; padding:6px 12px; border-radius:999px;
   font-size:12px; font-weight:600; letter-spacing:.02em;
 }
-.daypill .dot{width:7px; height:7px; border-radius:50%; background:#7FD9BE; box-shadow:0 0 0 3px rgba(127,217,190,.25);}
+.daypill .dot{width:7px; height:7px; border-radius:50%; background:#B7E0BE; box-shadow:0 0 0 3px rgba(183,224,190,.25);}
 
 /* ============================================================
    TAB PANELS
@@ -92,13 +93,13 @@ main{background-color:#F5EFE6;}
 /* ---------- HERO ---------- */
 .hero{
   background-color:#FBF7F0;
-  background-image:radial-gradient(120% 80% at 50% -10%, rgba(194,138,44,.10), transparent 60%);
+  background-image:radial-gradient(120% 80% at 50% -10%, rgba(205,42,62,.10), transparent 60%);
   border:1px solid var(--line); border-radius:var(--radius);
   padding:26px 22px 22px; text-align:center; box-shadow:var(--shadow);
   position:relative; overflow:hidden;
 }
 .hero .glaze{position:absolute; inset:0; pointer-events:none;
-  background:linear-gradient(115deg, transparent 40%, rgba(31,110,90,.06) 55%, rgba(194,138,44,.08) 60%, transparent 72%);}
+  background:linear-gradient(115deg, transparent 40%, rgba(63,122,79,.06) 55%, rgba(205,42,62,.08) 60%, transparent 72%);}
 .hero .dates{font-size:11px; letter-spacing:.2em; text-transform:uppercase; color:var(--ochre); font-weight:700;}
 .hero h1{font-size:38px; margin:10px 0 4px; color:var(--wine); letter-spacing:.005em;}
 .hero .tag{font-style:italic; font-family:"Cormorant Garamond",Georgia,serif; font-size:18px; color:var(--ink); line-height:1.35; max-width:34ch; margin:0 auto;}
@@ -121,7 +122,7 @@ main{background-color:#F5EFE6;}
   display:flex; align-items:center; gap:14px; padding:16px 16px; min-height:var(--tap);
   color:var(--ink); font-family:inherit;
 }
-.dayhead:focus-visible{outline:3px solid rgba(31,110,90,.5); outline-offset:-3px;}
+.dayhead:focus-visible{outline:3px solid rgba(63,122,79,.5); outline-offset:-3px;}
 .daynum{flex:0 0 auto; width:46px; height:46px; border-radius:12px; background:#F1E7D6; border:1px solid var(--line);
   display:flex; flex-direction:column; align-items:center; justify-content:center; color:var(--wine);}
 .today .daynum{background:var(--wine); color:#F6E9DD; border-color:var(--wine);}
@@ -134,7 +135,7 @@ main{background-color:#F5EFE6;}
 .chev{flex:0 0 auto; color:var(--mute); transition:transform .3s ease;}
 .daycard.open .chev{transform:rotate(180deg);}
 .todaytag{display:inline-block; margin-left:8px; font-size:9.5px; letter-spacing:.12em; text-transform:uppercase; font-weight:700;
-  color:var(--eosin); background:rgba(31,110,90,.1); padding:2px 7px; border-radius:6px; vertical-align:middle;}
+  color:var(--eosin); background:rgba(63,122,79,.1); padding:2px 7px; border-radius:6px; vertical-align:middle;}
 
 .daybody{max-height:0; overflow:hidden; opacity:0; transition:max-height .4s ease, opacity .3s ease;}
 .daycard.open .daybody{opacity:1;}
@@ -167,11 +168,11 @@ main{background-color:#F5EFE6;}
 .stoploc .guess{font-size:10px; letter-spacing:.06em; text-transform:uppercase; color:var(--ochre); font-weight:700; margin-left:5px;}
 .badges{display:flex; flex-wrap:wrap; gap:5px; margin:7px 0 2px;}
 .badge{font-size:10.5px; font-weight:700; letter-spacing:.02em; padding:3px 8px; border-radius:6px;
-  background:rgba(110,30,60,.08); color:var(--wine); border:1px solid rgba(110,30,60,.14);}
-.badge.green{background:rgba(31,110,90,.1); color:var(--eosin); border-color:rgba(31,110,90,.18);}
+  background:rgba(205,42,62,.08); color:var(--wine); border:1px solid rgba(205,42,62,.14);}
+.badge.green{background:rgba(63,122,79,.1); color:var(--eosin); border-color:rgba(63,122,79,.18);}
 .stopnote{font-size:13.5px; color:var(--ink); line-height:1.5; margin:8px 0 0;}
-.plate{font-size:13px; line-height:1.5; margin:9px 0 0; padding:9px 11px; border-left:3px solid var(--ochre);
-  background:rgba(194,138,44,.06); border-radius:0 8px 8px 0;}
+.plate{font-size:13px; line-height:1.5; margin:9px 0 0; padding:9px 11px; border-left:3px solid var(--wine);
+  background:rgba(205,42,62,.06); border-radius:0 8px 8px 0;}
 .plate b{color:var(--wine); font-weight:700;}
 
 /* "If you don't drink" disclosure */
@@ -182,7 +183,7 @@ main{background-color:#F5EFE6;}
 .nodrink summary .glass{transition:transform .25s;}
 .nodrink[open] summary .glass{transform:rotate(8deg);}
 .nodrink .body{font-size:13px; line-height:1.5; color:var(--ink); margin-top:6px; padding:10px 12px;
-  background:rgba(31,110,90,.07); border:1px solid rgba(31,110,90,.16); border-radius:10px;}
+  background:rgba(63,122,79,.07); border:1px solid rgba(63,122,79,.16); border-radius:10px;}
 
 /* action buttons */
 .actions{display:flex; flex-wrap:wrap; gap:8px; margin-top:11px;}
@@ -206,7 +207,7 @@ main{background-color:#F5EFE6;}
 .dinecard h3{font-size:22px; color:var(--wine-deep);}
 .dinecard .where{font-size:12px; color:var(--mute); margin-top:2px;}
 .dinecard .when{display:inline-block; margin-top:8px; font-size:11px; font-weight:700; letter-spacing:.06em; text-transform:uppercase;
-  color:var(--eosin); background:rgba(31,110,90,.1); padding:3px 9px; border-radius:999px;}
+  color:var(--eosin); background:rgba(63,122,79,.1); padding:3px 9px; border-radius:999px;}
 
 /* ============================================================
    WEATHER TAB
@@ -236,7 +237,7 @@ main{background-color:#F5EFE6;}
 .cc-field label{display:block; font-size:10.5px; letter-spacing:.1em; text-transform:uppercase; font-weight:700; color:var(--mute); margin-bottom:5px;}
 .cc-field input, .cc-field select{width:100%; min-height:var(--tap); border:1px solid var(--line); border-radius:11px; background:#F5EFE6;
   font-family:inherit; font-size:16px; font-weight:600; color:var(--ink); padding:0 12px; -webkit-appearance:none; appearance:none;}
-.cc-field input:focus, .cc-field select:focus{outline:none; border-color:var(--eosin); box-shadow:0 0 0 3px rgba(31,110,90,.15);}
+.cc-field input:focus, .cc-field select:focus{outline:none; border-color:var(--eosin); box-shadow:0 0 0 3px rgba(63,122,79,.15);}
 .cc-out{background:#F1E7D6; border:1px solid var(--line); border-radius:12px; padding:13px 14px; display:flex; justify-content:space-between; align-items:baseline; margin-bottom:8px;}
 .cc-out .lab{font-size:12px; color:var(--mute); font-weight:600;}
 .cc-out .val{font-size:21px; font-weight:700; color:var(--wine); font-variant-numeric:tabular-nums;}
@@ -249,10 +250,18 @@ main{background-color:#F5EFE6;}
 .kv:last-child{border-bottom:0;}
 .kv .k{flex:0 0 40%; color:var(--mute); font-weight:600;}
 .kv .v{flex:1; color:var(--ink);}
-.phrase{display:flex; justify-content:space-between; gap:12px; padding:9px 0; border-bottom:1px solid var(--line); font-size:14px;}
+.phrase{display:flex; align-items:center; gap:12px; padding:10px 0; border-bottom:1px solid var(--line); font-size:14px;}
 .phrase:last-child{border-bottom:0;}
-.phrase .hu{font-family:"Cormorant Garamond",Georgia,serif; font-weight:600; color:var(--wine-deep); font-size:16px;}
-.phrase .en{color:var(--mute); text-align:right;}
+.say{flex:0 0 auto; width:42px; height:42px; border-radius:12px; border:1px solid var(--line); background:#F1E7D6;
+  color:var(--wine); display:flex; align-items:center; justify-content:center; cursor:pointer; transition:transform .12s, background .15s, color .15s;}
+.say:active{transform:scale(.93);}
+.say.speaking{background:var(--eosin); color:#fff; border-color:var(--eosin);}
+.say svg{width:18px; height:18px;}
+.ph-text{flex:1 1 auto; min-width:0;}
+.phrase .hu{display:block; font-family:"Cormorant Garamond",Georgia,serif; font-weight:600; color:var(--wine-deep); font-size:17px; line-height:1.1;}
+.phrase .phon{display:block; font-size:11px; color:var(--mute); letter-spacing:.03em; margin-top:2px;}
+.phrase .en{flex:0 0 auto; color:var(--mute); text-align:right; font-size:12.5px; max-width:42%;}
+.saynote{font-size:11.5px; color:var(--mute); margin-top:12px; display:none;}
 
 /* ============================================================
    EMERGENCY TAB
@@ -279,7 +288,7 @@ nav.tabbar{
   background-color:#FBF7F0;
   border-top:1px solid var(--line);
   display:flex; padding:7px 6px calc(env(safe-area-inset-bottom) + 7px);
-  box-shadow:0 -6px 20px rgba(74,18,40,.06);
+  box-shadow:0 -6px 20px rgba(142,27,46,.06);
 }
 .tabbtn{flex:1; background:transparent; border:0; cursor:pointer; font-family:inherit;
   display:flex; flex-direction:column; align-items:center; gap:3px; padding:6px 2px; color:var(--mute);
@@ -289,7 +298,7 @@ nav.tabbar{
 .tabbtn[aria-selected="true"]{color:var(--wine);}
 .tabbtn[aria-selected="true"] .ind{height:3px; width:18px; border-radius:3px; background:var(--eosin); margin-top:1px;}
 .tabbtn .ind{height:3px; width:0; margin-top:1px;}
-.tabbtn:focus-visible{outline:3px solid rgba(31,110,90,.4);}
+.tabbtn:focus-visible{outline:3px solid rgba(63,122,79,.4);}
 
 /* ---------- toast ---------- */
 .toast{position:fixed; bottom:calc(env(safe-area-inset-bottom) + 84px); left:50%; transform:translateX(-50%) translateY(12px);
@@ -403,12 +412,38 @@ footer.fineprint{text-align:center; font-size:11px; color:var(--mute); padding:6
 
       <div class="toolcard">
         <h3>A few words at the table</h3>
-        <div class="phrase"><span class="hu">Jó napot</span><span class="en">Hello / good day</span></div>
-        <div class="phrase"><span class="hu">Köszönöm</span><span class="en">Thank you</span></div>
-        <div class="phrase"><span class="hu">A számlát, kérem</span><span class="en">The bill, please</span></div>
-        <div class="phrase"><span class="hu">Nem iszom alkoholt</span><span class="en">I don't drink alcohol</span></div>
-        <div class="phrase"><span class="hu">Nagyon finom!</span><span class="en">Delicious!</span></div>
-        <div class="phrase"><span class="hu">Egészségére</span><span class="en">Cheers / to your health</span></div>
+        <p class="lead" style="margin-bottom:8px;">Tap the speaker to hear each one.</p>
+        <div class="phrase">
+          <button class="say" data-say="Jó napot" aria-label="Hear: Jó napot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H3v6h3l5 4z"/><path d="M16 9a4 4 0 0 1 0 6M19 6.5a8 8 0 0 1 0 11"/></svg></button>
+          <div class="ph-text"><span class="hu">Jó napot</span><span class="phon">yoh NAW-pot</span></div>
+          <span class="en">Hello / good day</span>
+        </div>
+        <div class="phrase">
+          <button class="say" data-say="Köszönöm" aria-label="Hear: Köszönöm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H3v6h3l5 4z"/><path d="M16 9a4 4 0 0 1 0 6M19 6.5a8 8 0 0 1 0 11"/></svg></button>
+          <div class="ph-text"><span class="hu">Köszönöm</span><span class="phon">KUH-suh-nuhm</span></div>
+          <span class="en">Thank you</span>
+        </div>
+        <div class="phrase">
+          <button class="say" data-say="A számlát, kérem" aria-label="Hear: A számlát, kérem"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H3v6h3l5 4z"/><path d="M16 9a4 4 0 0 1 0 6M19 6.5a8 8 0 0 1 0 11"/></svg></button>
+          <div class="ph-text"><span class="hu">A számlát, kérem</span><span class="phon">ah SAHM-laht, KAY-rem</span></div>
+          <span class="en">The bill, please</span>
+        </div>
+        <div class="phrase">
+          <button class="say" data-say="Nem iszom alkoholt" aria-label="Hear: Nem iszom alkoholt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H3v6h3l5 4z"/><path d="M16 9a4 4 0 0 1 0 6M19 6.5a8 8 0 0 1 0 11"/></svg></button>
+          <div class="ph-text"><span class="hu">Nem iszom alkoholt</span><span class="phon">nem EE-som OL-ko-holt</span></div>
+          <span class="en">I don't drink alcohol</span>
+        </div>
+        <div class="phrase">
+          <button class="say" data-say="Nagyon finom!" aria-label="Hear: Nagyon finom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H3v6h3l5 4z"/><path d="M16 9a4 4 0 0 1 0 6M19 6.5a8 8 0 0 1 0 11"/></svg></button>
+          <div class="ph-text"><span class="hu">Nagyon finom!</span><span class="phon">NAW-dyon FEE-nom</span></div>
+          <span class="en">Delicious!</span>
+        </div>
+        <div class="phrase">
+          <button class="say" data-say="Egészségére" aria-label="Hear: Egészségére"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H3v6h3l5 4z"/><path d="M16 9a4 4 0 0 1 0 6M19 6.5a8 8 0 0 1 0 11"/></svg></button>
+          <div class="ph-text"><span class="hu">Egészségére</span><span class="phon">EG-ace-shay-GAY-reh</span></div>
+          <span class="en">Cheers / to your health</span>
+        </div>
+        <p class="saynote" id="saynote">Your device has no built-in voice for audio playback — the phonetic guide under each phrase will help.</p>
       </div>
     </section>
 
@@ -977,6 +1012,26 @@ function convert(){
     <div class="cc-out"><span class="lab">${c}</span><span class="val">${fmt(out[c], c)}</span></div>`).join("");
 }
 
+/* ---------------------------- SPEECH (Hungarian) ---------------------------- */
+const SPEECH_OK = ("speechSynthesis" in window) && ("SpeechSynthesisUtterance" in window);
+function huVoice(){
+  if (!SPEECH_OK) return null;
+  const vs = speechSynthesis.getVoices() || [];
+  return vs.find(v=>/^hu(-|_|$)/i.test(v.lang)) || vs.find(v=>/hungar/i.test(v.name)) || null;
+}
+function speak(text, btn){
+  if (!SPEECH_OK){ toast("Audio not available on this device"); return; }
+  try{ speechSynthesis.cancel(); }catch(e){}
+  const u = new SpeechSynthesisUtterance(text);
+  u.lang = "hu-HU";
+  const v = huVoice(); if (v) u.voice = v;
+  u.rate = 0.9;
+  document.querySelectorAll(".say.speaking").forEach(b=>b.classList.remove("speaking"));
+  u.onstart = ()=>{ if (btn) btn.classList.add("speaking"); };
+  u.onend = u.onerror = ()=>{ if (btn) btn.classList.remove("speaking"); };
+  speechSynthesis.speak(u);
+}
+
 /* ---------------------------- CLOCK + HEADER ---------------------------- */
 function tickClock(){
   try{
@@ -1037,11 +1092,23 @@ function init(){
 
   // tabs
   $$(".tabbtn").forEach(b=>b.addEventListener("click", ()=>showTab(b.dataset.tab)));
-  // copy (event delegation)
+  // copy + speak (event delegation)
   document.addEventListener("click", e=>{
-    const btn = e.target.closest("[data-copy]");
-    if (btn) copyText(decodeURIComponent(btn.dataset.copy));
+    const copyBtn = e.target.closest("[data-copy]");
+    if (copyBtn){ copyText(decodeURIComponent(copyBtn.dataset.copy)); return; }
+    const sayBtn = e.target.closest("[data-say]");
+    if (sayBtn){ speak(sayBtn.dataset.say, sayBtn); }
   });
+  // warm up speech voices; show fallback note if speech is unsupported
+  if (SPEECH_OK){
+    speechSynthesis.getVoices();
+    if (typeof speechSynthesis.onvoiceschanged !== "undefined"){
+      speechSynthesis.onvoiceschanged = ()=>speechSynthesis.getVoices();
+    }
+  } else {
+    const n = $("#saynote"); if (n) n.style.display = "block";
+    $$(".say").forEach(b=>b.style.display="none");
+  }
   // currency
   ["ccAmount","ccFrom","rateEUR","rateUSD"].forEach(id=>{
     const el = $("#"+id); if (el) el.addEventListener("input", convert);
@@ -1058,4 +1125,3 @@ else init();
 </script>
 </body>
 </html>
-
